@@ -1,8 +1,6 @@
 const router = require('express').Router();
-const knex = require('knex');
-const knexConfig = require('../knexfile');
 
-const db = knex(knexConfig.development);
+const db = require('../data/dbConfig.js');
 
 router.get('/', (req, res) => {
     db('dishes')
