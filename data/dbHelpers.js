@@ -16,3 +16,18 @@ function addDish(dish) {
     return db('dishes')
         .insert({ dish })
 }
+
+function getDish(id) {
+    return db('dishes')
+        .where({ id })
+        .first()
+}
+
+function getRecipes() {
+    return db('recipes')
+}
+
+function addRecipe(recipe) {
+    return db('recipes')
+        .insert(recipe)
+}
